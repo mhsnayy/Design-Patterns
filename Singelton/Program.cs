@@ -34,14 +34,14 @@ namespace DesignPatterns
             }
             public static CustomerManager CreateAsSingelton() //static method newlenememesi lazım.
             {
-               lock (_lockObject)
+                lock (_lockObject)
                 {
                     if (_customerManager == null)
                     {
                         _customerManager = new CustomerManager();
                     }
                 }
-               return _customerManager;
+                return _customerManager;
 
                 // return _customerManager ?? (_customerManager = new CustomerManager()); // in one line without lock
             }
